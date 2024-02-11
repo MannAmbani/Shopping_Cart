@@ -8,7 +8,6 @@
 
 .loginsignup-container{
     width: 580px;
-    height: 600px;
     background: white;
     margin: auto;
     padding: 40px 60px;
@@ -27,8 +26,8 @@
 
 }
 
-.loginsignup-field input{
-    height: 72px;
+.loginsignup-field input,textarea{
+    height: 48px;
     width: 100%;
     padding-left: 20px;
     border: 1px solid #c9c9c9;
@@ -49,6 +48,12 @@
     cursor: pointer;
 }
 
+.loginsignup-container button:active{
+  
+    background: #e96565;
+ 
+}
+
 .loginsignup-login{
     margin-top: 20px;
     color: #5c5c5c;
@@ -59,6 +64,7 @@
 .loginsignup-login span{
     color: #ff4141;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .loginsignup-agree{
@@ -70,4 +76,11 @@
     font-size: 18px;
     font-weight: 500;
 
+}
+
+.error-message{
+    color: red;
+    text-align: right;
+    margin-block-end: 0;
+    margin-block-start: 4px;
 }

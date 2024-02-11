@@ -5,7 +5,7 @@ import { Popular } from '../Components/Popular/Popular'
 export const Shop = () => {
   return (
     <div>
-        <Hero/>
+        {/* <Hero/> */}
         <Popular/>
     </div>
   )

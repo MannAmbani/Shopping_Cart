@@ -7,7 +7,7 @@ import { Item } from '../Item/Item'
 export const Popular = () => {
   return (
     <div className='popular'>
-        <h1>POPULAR PRODUCT</h1>
+        <h1>POPULAR PRODUCTS</h1>
         <hr/>
         <div className="popular-item">
             {
