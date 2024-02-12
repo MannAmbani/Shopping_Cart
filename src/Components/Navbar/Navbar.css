@@ -2,6 +2,7 @@
     display: flex;
     justify-content: space-between;
     box-shadow: 0 1px 3px -2px black;
+    padding: 0 24px;
 }
 
 .nav-logo{
@@ -68,6 +69,14 @@
 .nav-login-cart button:active{
     background-color: #f3f3f3;
 }
+
+.nav-login-profile-img{
+    height: 42px;
+    width: 42px;
+    cursor: pointer;
+}
+
+
 
 .nav-cart-count{
     width: 22px;

@@ -2,24 +2,6 @@ import React, { useState } from 'react'
 import './CSS/LoginSignup.css'
 import { Link, useNavigate } from 'react-router-dom'
 
-// export const Login = () => {
-//   return (
-//     <div className='loginsignup'>
-//     <div className="loginsignup-container">
-//         <h1>Login</h1>
-//         <div className="loginsignup-field">
-//             <input type='email' placeholder='Email Address'/>
-//             <input type='password' placeholder='Password'/>
-//         </div>
-//         <Link to='/'><button>Continue</button></Link>
-
-//         <p className="loginsignup-login">Don't have an account? <Link style={{textDecoration: 'none'}} to='/signup'><span>Sign Up</span></Link> </p>
-
-//     </div>
-// </div>
-//   )
-// }
-
 export const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

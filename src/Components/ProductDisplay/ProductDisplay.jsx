@@ -43,7 +43,8 @@ export const ProductDisplay = (props) => {
             </div>
 
             <div className="productdisplay-right-description">
-            Lorem ipsum dolor sit amet, consectetur adipisci.
+           
+Indulge in superior comfort with our premium-quality products. Meticulously crafted from luxurious materials, our pieces offer exquisite durability, stylish fabrics, and unparalleled comfort. Redefine your style with our exceptional products.
             </div>
             <div className="productdisplay-right-size">
                 <h1>Select Size</h1>

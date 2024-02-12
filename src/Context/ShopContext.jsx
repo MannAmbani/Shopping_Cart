@@ -11,9 +11,16 @@ const getDefaultCart = ()=>{
     return cart;
 }
 
+
+
 const ShopContextProvider = (props) => {
     const [cartItems,setCartItems] = useState(getDefaultCart())
     
+
+    //removing cart item
+    const clearCart = () => {
+        setCartItems(getDefaultCart());
+      };
 
     // for adding item in cart
 
@@ -50,7 +57,7 @@ const ShopContextProvider = (props) => {
         return totalItem;
     }
     const contextValue = {
-        getTotalCartItems,getTotalCartAmount,all_product,cartItems,addToCart,removeFromCart
+        getTotalCartItems,getTotalCartAmount,all_product,cartItems,addToCart,removeFromCart,clearCart
     }
 
     

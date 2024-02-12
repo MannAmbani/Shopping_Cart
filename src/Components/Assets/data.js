@@ -1,7 +1,7 @@
-import p1_img from './product_1.png'
-import p2_img from './product_2.png'
-import p3_img from './product_3.png'
-import p4_img from './product_4.png'
+// import p1_img from './product_1.png'
+// import p2_img from './product_2.png'
+// import p3_img from './product_3.png'
+// import p4_img from './product_4.png'
 import p11_img from "./product_11.png";
 import p12_img from "./product_12.png";
 import p13_img from "./product_13.png";
