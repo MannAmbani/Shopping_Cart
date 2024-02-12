@@ -5,11 +5,14 @@ import star_dull_icon from "../Assets/star_dull_icon.png"
 import { ShopContext } from '../../Context/ShopContext'
 
 export const ProductDisplay = (props) => {
+    //using props to get product id
     const{product} = props;
+    // using shoupsontext to add item to cart
     const {addToCart} = useContext(ShopContext);
   return (
     <div className='productdisplay'>
         
+        {/* left part inages */}
         <div className="productdisplay-left">
             <div className="productdisplay-img-list">
                 <img src={product.image} alt=''/>
@@ -21,6 +24,7 @@ export const ProductDisplay = (props) => {
                 <img className='productdisplay-main-img' src={product.image} alt=''/>
             </div>
         </div>
+        {/* right part content */}
         <div className="productdisplay-right">
             <h1>{product.name}</h1>
             <div className="productdisplay-right-stars">
@@ -41,7 +45,7 @@ export const ProductDisplay = (props) => {
                     ${product.new_price}
                 </div>
             </div>
-
+{/* descricption */}
             <div className="productdisplay-right-description">
            
 Indulge in superior comfort with our premium-quality products. Meticulously crafted from luxurious materials, our pieces offer exquisite durability, stylish fabrics, and unparalleled comfort. Redefine your style with our exceptional products.

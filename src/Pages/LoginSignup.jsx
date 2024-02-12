@@ -3,14 +3,18 @@ import './CSS/LoginSignup.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 export const LoginSignup = () => {
+  //  creating State for input fields
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [rePassword, setRePassword] = useState('');
+// creating states for error messages
   const [emailError, setEmailError] = useState('');
   const [passwordError, setPasswordError] = useState('');
   const [rePasswordError, setRePasswordError] = useState('');
+  //initializing navigation  hooks
   const navigate = useNavigate();
 
+  // Functions to handle changes of form value
   const handleEmailChange = (e) => {
     setEmail(e.target.value)
   };
@@ -24,10 +28,11 @@ export const LoginSignup = () => {
   }
 
 
+  // validaion form fields
   const validateInputs = () => {
     let isValid = true;
 
-    // Validate email
+    // Validating email for empty and regex
     if (!email) {
       setEmailError('Email is required');
       isValid = false;
@@ -39,7 +44,7 @@ export const LoginSignup = () => {
       setEmailError('');
     }
 
-    // Validate password
+    // Validate password for empty and regex
     if (!password) {
       setPasswordError('Password is required');
       isValid = false;
@@ -48,7 +53,7 @@ export const LoginSignup = () => {
       setPasswordError('');
     }
 
-    // Validate password
+    // Validate confirm password for empty and regex
     if (!rePassword) {
       setRePasswordError('Confirm Password is required');
       isValid = false;
@@ -63,8 +68,10 @@ export const LoginSignup = () => {
     return isValid;
   };
 
+  //handel coninue button click
   const handleContinueClick = () => {
     if (validateInputs()) {
+      //navigating to create account page
       navigate('/createAccount');
     }
   };
@@ -91,6 +98,7 @@ export const LoginSignup = () => {
 
         </div>
         <button onClick={handleContinueClick}>Continue</button>
+        {/* navigate using react dom link to login page */}
         <p className="loginsignup-login">Already have an account?<Link style={{ textDecoration: 'none' }} to='/login'><span>  Login Here</span></Link> </p>
       </div>
     </div>

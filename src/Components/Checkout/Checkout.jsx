@@ -5,11 +5,15 @@ import { Link } from 'react-router-dom';
 
 export const Checkout = () => {
     
-    
+    // check out page consist of payment method amount and option to change address
       const [shippingAddress, setShippingAddress] = useState("139 Jackson Avenue");
+    //   using following  hooks for future use
       const [selectedPaymentMethod, setSelectedPaymentMethod] = useState(null);
       const [isEditing, setEditing] = useState(true); 
+
       const {getTotalCartAmount,all_product,cartItems,addToCart,removeFromCart,clearCart} = useContext(ShopContext)
+
+      //button and onclick or onchange handeling methods
     
       const handleInputChange = (e) => {
         
@@ -85,7 +89,7 @@ export const Checkout = () => {
             <p>Total: ${getTotalCartAmount()}</p>
           </div>
     
-        
+        {/* navigating to place order place */}
           <Link to='/orderplaced'><button onClick={handlePlaceOrderClick}>Place Order</button></Link>
         </div>
         </div>

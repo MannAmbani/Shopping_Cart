@@ -3,12 +3,15 @@ import './CSS/LoginSignup.css'
 import { Link, useNavigate } from 'react-router-dom'
 
 export const Login = () => {
+      //  creating State for input fields
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    // creating states for error messages
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const navigate = useNavigate();
 
+      // Functions to handle changes of form value
     const handleEmailChange = (e) => {
         setEmail(e.target.value);
     };
@@ -17,6 +20,7 @@ export const Login = () => {
         setPassword(e.target.value);
     };
 
+    // validaion form fields
     const validateInputs = () => {
         let isValid = true;
 
@@ -39,8 +43,10 @@ export const Login = () => {
         return isValid;
     };
 
+      //handel coninue button click
     const handleContinueClick = () => {
         if (validateInputs()) {
+            //navigating to home page
             navigate('/');
         }
     };
@@ -68,6 +74,7 @@ export const Login = () => {
                 <button onClick={handleContinueClick}>Continue</button>
                 <p className="loginsignup-login">
                     Don't have an account?
+                    {/* navigating to signup through link */}
                     <Link style={{ textDecoration: 'none' }} to='/signup'>
                         <span>Sign Up</span>
                     </Link>

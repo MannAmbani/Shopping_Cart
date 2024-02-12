@@ -6,10 +6,12 @@ import add_icon from '../Assets/plus.png'
 import { Link } from 'react-router-dom'
 
 export const CartItems = () => {
+    // using shopcontext to perform crud operation on cart
     const {getTotalCartAmount,all_product,cartItems,addToCart,removeFromCart} = useContext(ShopContext)
 
   return (
     <div className='cartitems'>
+        {/* item lables */}
         <div className="cartitems-format-main">
             <p>Product</p>
             <p>Title</p>
@@ -20,6 +22,7 @@ export const CartItems = () => {
             <p>Remove</p>
         </div>
         <hr/>
+        {/* items */}
         {all_product.map((e) =>{
             if(cartItems[e.id] > 0){
                 return <div>
@@ -39,6 +42,7 @@ export const CartItems = () => {
             return null;
         })}
 
+{/* payment info */}
         <div className="cartitems-down">
             <div className="cartitems-total">
                 <h1>Cart Totals</h1>
@@ -60,6 +64,7 @@ export const CartItems = () => {
                 </div>
                 <Link to='/checkout'><button>PROCEED TO CHECKOUT</button></Link>
             </div>
+            {/* promo */}
             <div className="cartitems-promocode">
                 <p>If you have a promo code, Enter it here</p>
                 <div className="cartitems-promobox">

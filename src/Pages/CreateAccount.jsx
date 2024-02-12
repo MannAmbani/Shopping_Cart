@@ -4,14 +4,18 @@ import './CSS/LoginSignup.css'
 
 export const CreateAccount = () => {
 
+    //  creating State for input fields
     const [name, setName] = useState('');
     const [contact, setContact] = useState('');
     const [address, setAddress] = useState('');
+    // creating states for error messages
     const [nameError, setNameError] = useState('');
     const [contactError, setContactError] = useState('');
     const [addressError, setAddressError] = useState('');
+     //initializing navigation  hooks
     const navigate = useNavigate();
 
+    // Functions to handle changes of form value
     const handleNameChange = (e) => {
         setName(e.target.value);
     };
@@ -24,6 +28,7 @@ export const CreateAccount = () => {
         setAddress(e.target.value);
     };
 
+      // validaion form fields
     const validateInputs = () => {
         let isValid = true;
 
@@ -35,7 +40,7 @@ export const CreateAccount = () => {
             setNameError('');
         }
 
-        // Validate contact
+        // Validate contact with regex
         if (!contact) {
             setContactError('Contact is required');
             isValid = false;
@@ -57,9 +62,10 @@ export const CreateAccount = () => {
         return isValid;
     };
 
+    //handel coninue button click
     const handleContinueClick = () => {
         if (validateInputs()) {
-            
+            //navigating to home page
             navigate('/');
         }
     };
@@ -93,6 +99,7 @@ export const CreateAccount = () => {
                 <button onClick={handleContinueClick}>Continue</button>
                 <p className="loginsignup-login">
                     Already have an account?
+                    {/* navigate using react dom link to login page */}
                     <Link style={{ textDecoration: 'none' }} to='/login'>
                         <span>Login</span>
                     </Link>
